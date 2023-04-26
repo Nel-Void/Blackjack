@@ -5,18 +5,20 @@ let hasBlackJack = false;
 let isAlive = true;
 let message = "";
 
-function startGame() {
+// Get the element ID to display message
+let messageEl = document.getElementById("message-el");
 
+function startGame() {
     if (sum < 21) {
-        message = "Do you want to draw a new card? 🙂";   
+        message = "Do you want to draw a new card?";   
     } else if (sum === 21) {
-        message = "Alright! You've got Blackjack! 🥳";
+        message = "Alright! You've got Blackjack!";
         hasBlackJack = true;
     } else {
-        message = "You've lost the round! 😭";
+        message = "You've lost the round!";
         isAlive = false;
     }
-    console.log(message)
+    messageEl.textContent = message;
 }
 
 
