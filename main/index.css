@@ -1,0 +1,16 @@
+
+body {
+    font-family: 'Trebucket MS', 'Lucida Sans Unicode', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(images/table.png);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
