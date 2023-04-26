@@ -8,6 +8,8 @@ let message = "";
 // Get the element ID to display message
 let messageEl = document.getElementById("message-el");
 
+let sumEl = document.querySelector("#sum-el");
+
 function startGame() {
     if (sum < 21) {
         message = "Do you want to draw a new card?";   
@@ -19,6 +21,7 @@ function startGame() {
         isAlive = false;
     }
     messageEl.textContent = message;
+    sumEl.textContent = "Sum: " + sum;
 }
 
 
