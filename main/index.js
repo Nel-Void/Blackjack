@@ -1,16 +1,12 @@
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard]; //array - ordered list of cards
-let sum = firstCard + secondCard;
+let cards = []; //array - ordered list of cards
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 
 // Get the element ID to display message
 let messageEl = document.getElementById("message-el");
-
 let sumEl = document.querySelector("#sum-el");
-
 let cardsEl = document.querySelector("#cards-el")
 
 function getRandomCard() {
@@ -25,6 +21,13 @@ function getRandomCard() {
 }
 
 function startGame() {
+    // initialize game
+    isAlive = true;
+    // Generate first 2 cards
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards.push(firstCard, secondCard);
+    sum = cards[0] + cards[1];
     renderGame();
 }
 
