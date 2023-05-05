@@ -4,6 +4,14 @@ let hasBlackJack = false;
 let isAlive = false;
 let message = "";
 
+let player = {
+    name: "Player",
+    chips: 150
+}
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
 // Get the element ID to display message
 let messageEl = document.getElementById("message-el");
 let sumEl = document.querySelector("#sum-el");
@@ -56,7 +64,7 @@ function renderGame() {
 
 function newCard() {
     // check game conditions before drawing new card
-    if (isAlive == true && hasBlackJack == false) {
+    if (isAlive === true && hasBlackJack === false) {
     let card = getRandomCard();
     sum += card;
     // Push the card to the cards array
